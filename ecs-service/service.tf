@@ -6,7 +6,7 @@ resource "aws_ecs_service" "test-ecs-service" {
   	desired_count   = 1
 
   	load_balancer {
-    	  target_group_arn  = "arn:aws:elasticloadbalancing:us-east-1:835141733713:targetgroup/ecs-target-group/1446ad9f4f50dd7b"
+    	  target_group_arn  = "${var.ecs_target_group}"
     	  container_port    = 80
     	  container_name    = "nginx"
 	}

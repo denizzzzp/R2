@@ -2,6 +2,8 @@
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
 variable "ecs_iam_role" {}
+variable "ecs_target_group" {}
+
 
 variable "ecs_cluster" {
   description = "ECS cluster name"
